@@ -1,0 +1,31 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/carofferform.css' %}">
+    {%  if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title> waslny.net homepage </title>
+    {% endif %}
+</head>
+<body>
+        <div class="topmenu">
+             <div class="topmenu-right">
+                 <a type="submit" onclick="location.href='{% url 'home-page' %}'" class="home btn btn-primary">  الرئيسية </a>
+                 <a type="submit" onclick="location.href='{% url 'home-page' %}'" class="caroffers btn btn-primary"> احدث عروض التوصيل </a>
+                 <a type="submit" onclick="location.href='{% url 'home-page' %}'" class="carrequests btn btn-primary"> احدث طلبات التوصيل  </a>
+                 <a type="submit" onclick="location.href='{% url 'home-page' %}'" class="callus btn btn-primary"> اتصل  بنا  </a>
+                </div>
+                <div class="topmenu-left">
+                    <a type="submit" onclick="location.href='{% url 'user_register' %}'" class="register btn btn-primary"> انشاء حساب </a>
+                    <a type="submit" onclick="location.href='{% url 'login' %}'" class="login btn btn-primary"> تسجيل الدخول </a>
+                </div>
+         </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

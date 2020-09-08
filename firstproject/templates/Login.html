@@ -1,0 +1,20 @@
+{%  extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <form id="signup">
+            <div class="header">
+                <h3>Sign In</h3>
+                <p>You want to fill out this form</p>
+            </div>
+            <div class="sep"></div>
+            <div class="inputs">
+                <input type="email" placeholder="e-mail" autofocus />
+                <input type="password" placeholder="Password" />
+                <div class="checkboxy">
+                    <input name="cecky" id="checky" value="1" type="checkbox" /><label class="terms">Remeber me</label>
+                </div>
+                <button class="btn btn-primary" id="submit" href="#">Sign in</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,236 @@
+{%  extends "base.html" %}
+{% block content %}
+        <form action="" method="post">
+            @csrf
+            <div class=" carshareformdiv">
+                <table id="carsharetable" border="0" id="tablehead" class="table table-striped">
+                    <tbody>
+                    <tr>
+                        <th scope="row">من </th>
+                        <div id="selectplace">
+                            <td>
+                                <select class="form-control " id="selectdistrict" name="pickupDistrict" value="">
+                                    <option value="الأميرية">الأميرية </option>
+                                    <option value="الزاوية الحمراء "> الزاوية الحمراء</option>
+                                    <option value="الزمالك">الزمالك </option>
+                                    <option value="السيدة زينب">السيدة زينب </option>
+                                    <option value="العاصمة الإدارية الجديدة">العاصمة الإدارية الجديدة  </option>
+                                    <option value="العباسية ">العباسية  </option>
+                                    <option value="العبور ">العبور  </option>
+                                    <option value="القاهرة الجديدة - التجمع ">القاهرة الجديدة - التجمع  </option>
+                                    <option value="الماظة ">الماظة  </option>
+                                    <option value="المرج"> المرج</option>
+                                    <option value="المعادي "> المعادي </option>
+                                    <option value="المقطم  "> المقطم  </option>
+                                    <option value="المنيل "> المنيل </option>
+                                    <option value="النزهة الجديدة  "> النزهة الجديدة  </option>
+                                    <option value="الوايلي    "> الوايلي     </option>
+                                    <option value="رمسيس"> رمسيس </option>
+                                    <option value="جسر السويس "> جسر السويس  </option>
+                                    <option value="حدائق القبة "> حدائق القبة   </option>
+                                    <option value="  حدائق حلوان "> حدائق حلوان  </option>
+                                    <option value="  حلمية الزيتون   "> حلمية الزيتون    </option>
+                                    <option value="حلوان "> حلوان </option>
+                                    <option value="دار السلام "> دار السلام </option>
+                                    <option value="رمسيس و امتداد رمسيس "> رمسيس و امتداد رمسيس </option>
+                                    <option value="روض الفرج ">روض الفرج </option>
+                                    <option value="زهراء المعادى ">زهراء المعادى ( </option>
+                                    <option value="شبرا">شبرا </option>
+                                    <option value="شيراتون ">شيراتون  </option>
+                                    <option value="عزبة النخل ">عزبة النخل  </option>
+                                    <option value="عين شمس ">عين شمس  </option>
+                                    <option value="قصر النيل ">قصر النيل  </option>
+                                    <option value="مدينة 15 مايو ">مدينة 15 مايو  </option>
+                                    <option value="مدينة الرحاب ">مدينة الرحاب  </option>
+                                    <option value="مدينة السلام ">مدينة السلام  </option>
+                                    <option value="مدينة الشروق ">مدينة الشروق  </option>
+                                    <option value="مدينة المستقبل ">مدينة المستقبل  </option>
+                                    <option value="مدينة بدر ">مدينة بدر  </option>
+                                    <option value="مدينة نصر ">مدينة نصر  </option>
+                                    <option value="مدينتي ">مدينتي  </option>
+                                    <option value="مصر الجديدة ">مصر الجديدة  </option>
+                                    <option value="وسط القاهرة ">وسط القاهرة  </option>
+                                    <option value="6 أكتوبر "> 6 أكتوبر </option>
+                                    <option value="أبو رواش "> أبو رواش </option>
+                                    <option value="أرض اللواء "> أرض اللواء </option>
+                                    <option value="أوسيم  "> أوسيم  </option>
+                                    <option value="إمبابة  "> إمبابة  </option>
+                                    <option value="البدرشين "> البدرشين </option>
+                                    <option value="البراجيل "> البراجيل </option>
+                                    <option value="الحوامدية "> الحوامدية </option>
+                                    <option value="الدقى "> الدقى </option>
+                                    <option value="الشيخ زايد  "> الشيخ زايد  </option>
+                                    <option value="الصف  "> الصف  </option>
+                                    <option value="العجوزة  "> العجوزة  </option>
+                                    <option value="العياط  "> العياط  </option>
+                                    <option value="الكيت كات  "> الكيت كات  </option>
+                                    <option value="المنصورية  "> المنصورية  </option>
+                                    <option value="المنيب  "> المنيب   </option>
+                                    <option value="المهندسين  "> المهندسين  </option>
+                                    <option value="الهرم  "> الهرم  </option>
+                                    <option value="الوراق  "> الوراق  </option>
+                                    <option value="بشتيل  "> بشتيل  </option>
+                                    <option value="بولاق الدكرور  "> بولاق الدكرور  </option>
+                                    <option value="ترسا   "> ترسا   </option>
+                                    <option value="جزيرة الدهب وكولدير  "> جزيرة الدهب وكولدير  </option>
+                                    <option value="حدائق 6 اكتوبر  "> حدائق 6 اكتوبر  </option>
+                                    <option value="حدائق الاهرام  "> حدائق الاهرام  </option>
+                                    <option value="حى الجيزة  "> حى الجيزة  </option>
+                                    <option value="دهشور  "> دهشور  </option>
+                                    <option value="صفط اللبن  "> صفط اللبن  </option>
+                                    <option value="غرب سوميد  "> غرب سوميد  </option>
+                                    <option value="فيصل   "> فيصل  </option>
+                                    <option value="كرداسة  "> كرداسة  </option>
+                                    <option value="مركز الجيزة  "> ركز الجيزة  </option>
+                                    <option value="مريوطية  "> مريوطية  </option>
+                                    <option value="حلوان "> حلوان </option>
+                                    <option value="منيل شيحة  "> منيل شيحة  </option>
+                                    <option value="ناهيا  "> ناهيا  </option>
+                                </select>
+                                <input type="text" class="form-control" id="From" name="From"  placeholder="مكان الالتقاء ">
+                            </td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <th scope="row">الي</th>
+                        <div class="selectplace">
+                            <td>
+                                <select class="form-control " id="selectdistrict" name="dropDistrict" value="">
+                                    <option value="الأميرية">الأميرية </option>
+                                    <option value="الزاوية الحمراء "> الزاوية الحمراء</option>
+                                    <option value="الزمالك">الزمالك </option>
+                                    <option value="السيدة زينب">السيدة زينب </option>
+                                    <option value="العاصمة الإدارية الجديدة">العاصمة الإدارية الجديدة  </option>
+                                    <option value="العباسية ">العباسية  </option>
+                                    <option value="العبور ">العبور  </option>
+                                    <option value="القاهرة الجديدة - التجمع ">القاهرة الجديدة - التجمع  </option>
+                                    <option value="الماظة ">الماظة  </option>
+                                    <option value="المرج"> المرج</option>
+                                    <option value="المعادي "> المعادي </option>
+                                    <option value="المقطم  "> المقطم  </option>
+                                    <option value="المنيل "> المنيل </option>
+                                    <option value="النزهة الجديدة  "> النزهة الجديدة  </option>
+                                    <option value="الوايلي    "> الوايلي     </option>
+                                    <option value="رمسيس"> رمسيس </option>
+                                    <option value="جسر السويس "> جسر السويس  </option>
+                                    <option value="حدائق القبة "> حدائق القبة   </option>
+                                    <option value="  حدائق حلوان "> حدائق حلوان  </option>
+                                    <option value="  حلمية الزيتون   "> حلمية الزيتون    </option>
+                                    <option value="حلوان "> حلوان </option>
+                                    <option value="دار السلام "> دار السلام </option>
+                                    <option value="رمسيس و امتداد رمسيس "> رمسيس و امتداد رمسيس </option>
+                                    <option value="روض الفرج ">روض الفرج </option>
+                                    <option value="زهراء المعادى ">زهراء المعادى ( </option>
+                                    <option value="شبرا">شبرا </option>
+                                    <option value="شيراتون ">شيراتون  </option>
+                                    <option value="عزبة النخل ">عزبة النخل  </option>
+                                    <option value="عين شمس ">عين شمس  </option>
+                                    <option value="قصر النيل ">قصر النيل  </option>
+                                    <option value="مدينة 15 مايو ">مدينة 15 مايو  </option>
+                                    <option value="مدينة الرحاب ">مدينة الرحاب  </option>
+                                    <option value="مدينة السلام ">مدينة السلام  </option>
+                                    <option value="مدينة الشروق ">مدينة الشروق  </option>
+                                    <option value="مدينة المستقبل ">مدينة المستقبل  </option>
+                                    <option value="مدينة بدر ">مدينة بدر  </option>
+                                    <option value="مدينة نصر ">مدينة نصر  </option>
+                                    <option value="مدينتي ">مدينتي  </option>
+                                    <option value="مصر الجديدة ">مصر الجديدة  </option>
+                                    <option value="وسط القاهرة ">وسط القاهرة  </option>
+                                    <option value="6 أكتوبر "> 6 أكتوبر </option>
+                                    <option value="أبو رواش "> أبو رواش </option>
+                                    <option value="أرض اللواء "> أرض اللواء </option>
+                                    <option value="أوسيم  "> أوسيم  </option>
+                                    <option value="إمبابة  "> إمبابة  </option>
+                                    <option value="البدرشين "> البدرشين </option>
+                                    <option value="البراجيل "> البراجيل </option>
+                                    <option value="الحوامدية "> الحوامدية </option>
+                                    <option value="الدقى "> الدقى </option>
+                                    <option value="الشيخ زايد  "> الشيخ زايد  </option>
+                                    <option value="الصف  "> الصف  </option>
+                                    <option value="العجوزة  "> العجوزة  </option>
+                                    <option value="العياط  "> العياط  </option>
+                                    <option value="الكيت كات  "> الكيت كات  </option>
+                                    <option value="المنصورية  "> المنصورية  </option>
+                                    <option value="المنيب  "> المنيب   </option>
+                                    <option value="المهندسين  "> المهندسين  </option>
+                                    <option value="الهرم  "> الهرم  </option>
+                                    <option value="الوراق  "> الوراق  </option>
+                                    <option value="بشتيل  "> بشتيل  </option>
+                                    <option value="بولاق الدكرور  "> بولاق الدكرور  </option>
+                                    <option value="ترسا   "> ترسا   </option>
+                                    <option value="جزيرة الدهب وكولدير  "> جزيرة الدهب وكولدير  </option>
+                                    <option value="حدائق 6 اكتوبر  "> حدائق 6 اكتوبر  </option>
+                                    <option value="حدائق الاهرام  "> حدائق الاهرام  </option>
+                                    <option value="حى الجيزة  "> حى الجيزة  </option>
+                                    <option value="دهشور  "> دهشور  </option>
+                                    <option value="صفط اللبن  "> صفط اللبن  </option>
+                                    <option value="غرب سوميد  "> غرب سوميد  </option>
+                                    <option value="فيصل   "> فيصل  </option>
+                                    <option value="كرداسة  "> كرداسة  </option>
+                                    <option value="مركز الجيزة  "> ركز الجيزة  </option>
+                                    <option value="مريوطية  "> مريوطية  </option>
+                                    <option value="حلوان "> حلوان </option>
+                                    <option value="منيل شيحة  "> منيل شيحة  </option>
+                                    <option value="ناهيا  "> ناهيا  </option>
+                                </select>
+                                <input type="text" class="form-control" name="To" id="To"  placeholder="مكان الوصول ">
+                            </td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <th scope="row">وقت الذهاب </th>
+                        <td>
+                            <div class="time">
+                                <input class="form-control" type="time"   id="time" name="pickuptime"
+                                       min="00:00" max="24:00">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">وقت العودة </th>
+                        <td>
+                            <div class="time">
+                                <input class="form-control" type="time" id="time" name="droptime"
+                                       min="00:00" max="24:00">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">الاجازة</th>
+                        <td>
+                            <div class="vacationcoleection">
+                                <select class="vacation" id="vacationday" name="vacationday">
+                                    <option value="الجمعة والسبت">الجمعة والسبت</option>
+                                    <option value="الاحد">الاحد</option>
+                                    <option value="الاثنين">الاثنين</option>
+                                    <option value="الثلاثاء">الثلاثاء</option>
+                                    <option value="الاربعاء">الاربعاء</option>
+                                    <option value="الخميس">الخميس</option>
+                                    <option value="االجمعة">االجمعة</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"> السعر </th>
+                        <td>
+                            <input class="form-control price" type="number" id="price" name="price" min="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"> الموبايل </th>
+                        <td>
+                            <input class="form-control phone" type="tel" id="phone" name="mobile" placeholder="123-45-678">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"> معلومات اضافية  </th>
+                        <td>
+                            <input type="textbox" class="form-control" name="extrainfo" id="info" placeholder="اختياري">
+                        </td>
+                    </tr>
+                </table>
+                <button type="submit" class="carrentbtn btn btn-danger">Submit</button>
+            </div>
+        </form>
+{% endblock content %}

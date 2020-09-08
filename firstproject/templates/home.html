@@ -1,0 +1,148 @@
+{%  extends "base.html" %}
+{% block content %}
+    <!-- choose from buttons collection-->
+    <div class="circle">
+        <p class="cir"> Waslny
+            <strong  style=" color:black;font-size:12px; font-weight: bold ;float: left;">   للتوصيل الشهري </strong>
+        </p>
+    </div>
+    <div class="choosediv">
+        <button onclick="location.href='{% url 'caroffer-page' %}'" type="button" class="btn btn-danger btn-circle btn-xl">  اضافة عرض  توصيل</button>
+        <button onclick="location.href='{% url 'carrequest-page' %}'" type="button" class="btn btn-danger btn-circle btn-xl">  اضافة طلب  التوصيل</button>
+        <button onclick="location.href='{% url 'home-page' %}'"class="btn btn-danger btn-circle btn-xl">     مشاهدة  طلبات التوصيل</button>
+        <button onclick="location.href='{% url 'home-page' %}'" type="submit" class="btn btn-danger btn-circle btn-xl">   مشاهدة عروض  التوصيل</button>
+    </div>
+
+
+    <!--  Car rent  Ads -->
+        <div class="caradv">
+                <div class="lastupdates">
+                    <button type="button" class="btn btn-danger"> احدث اعلانات طالبي الايجار </button>
+                </div><br><br>
+                    <div class=" advtablehead">
+                        <table border="0" id="tablehead" class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th scope="col" style="text-align:center">الاعلان </th>
+                                <th scope="col"> صاحب الاعلان</th>
+                                <th scope="col">من</th>
+                                <th scope="col">الي</th>
+                                <th scope="col">موعد الذهاب </th>
+                                <th scope="col">موعد العودة </th>
+                                <th scope="col">ايام الاجازة </th>
+                                <th scope="col">نوع السيارة</th>
+                                <th scope="col">رقم التليفون</th>
+                                <th scope="col">السعر </th>
+                                <th scope="col"> التواصل </th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div id="contain" class=" advtable">
+                        <table border="0" id="table_scroll" class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th class="firstcol" scope="row"> 1 </th>
+                                    <td> 2 </td>
+                                    <td> 3</td>
+                                    <td> 4</td>
+                                    <td> 5</td>
+                                    <td> 6</td>
+                                    <td>  7</td>
+                                    <td> 8</td>
+                                    <td> 9</td>
+                                    <td> 10 </td>
+                                    <td>11 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+
+      <!-- Car Owners Ads -->
+            <div class="caradv">
+                <div class="lastupdates">
+                    <button type="button" class="btn btn-danger"> احدث اعلانات الملاك </button>
+                </div><br><br>
+                <div class=" advtablehead">
+                    <table border="0" id="tablehead" class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">الاعلان </th>
+                            <th scope="col"> صاحب الاعلان</th>
+                            <th scope="col">من</th>
+                            <th scope="col">الي</th>
+                            <th scope="col">موعد الذهاب </th>
+                            <th scope="col">موعد العودة </th>
+                            <th scope="col">ايام الاجازة </th>
+                            <th scope="col">نوع السيارة</th>
+                            <th scope="col">رقم التليفون</th>
+                            <th scope="col">السعر </th>
+                            <th scope="col"> التواصل </th>
+                        </tr>
+                        </thead>
+                    </table>
+                 </div>
+                <div id="contain2" class=" advtable">
+                    <table border="0" id="table_scroll2" class="table table-striped">
+                        <tbody>
+                        <tr>
+                                    <th class="firstcol" scope="row"> 1 </th>
+                                    <td> 2 </td>
+                                    <td> 3</td>
+                                    <td> 4</td>
+                                    <td> 5</td>
+                                    <td> 6</td>
+                                    <td>  7</td>
+                                    <td> 8</td>
+                                    <td> 9</td>
+                                    <td> 10 </td>
+                                    <td>11 </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div >
+    </div>
+
+      <script>
+        var my_time;
+        $(document).ready(function() {
+            pageScroll();
+            $("#contain").mouseover(function() {
+                clearTimeout(my_time);
+            }).mouseout(function() {
+                pageScroll();
+            });
+        });
+        function pageScroll() {
+            var objDiv = document.getElementById("contain");
+            objDiv.scrollTop = objDiv.scrollTop + 1;
+            if (objDiv.scrollTop == (objDiv.scrollHeight - 100)) {
+                objDiv.scrollTop = 0;
+            }
+            my_time = setTimeout('pageScroll()', 25);
+        }
+    </script>
+    <script>
+        var my_time2;
+        $(document).ready(function() {
+            page2Scroll();
+            $("#contain2").mouseover(function() {
+                clearTimeout(my_time2);
+            }).mouseout(function() {
+                page2Scroll();
+            });
+        });
+        function page2Scroll() {
+            var objDiv = document.getElementById("contain2");
+            objDiv.scrollTop = objDiv.scrollTop + 1;
+            if (objDiv.scrollTop == (objDiv.scrollHeight - 100)) {
+                objDiv.scrollTop = 0;
+            }
+            my_time2 = setTimeout('page2Scroll()', 25);
+        }
+    </script>
+
+
+{% endblock content %}

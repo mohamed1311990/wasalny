@@ -1,0 +1,74 @@
+#info,#phone,#cartype,#From,#To,#selectdistrict,.carrentformdiv,.carshareformdiv,#time,.customerformdiv,#price,.carrentbtn,
+.carphoto,.vacation,.vacationlabel,.vacationcoleection{
+}
+#cartype
+{
+}
+#From,#To{
+    float: right;
+    width: 600px;
+    margin-right: 20px;
+}
+#selectdistrict {
+    float: right;
+    width: 150px;
+}
+.carrentformdiv,.carshareformdiv{
+    width: 1200px;
+    float: right;
+    margin-right: 100px;
+    margin-top: 50px;
+    background-color:rosybrown;
+;
+}
+#time{
+    text-align: right;
+    font-size: 18px;
+    width: 150px;
+
+}
+.customerformdiv {
+    display: block;
+    float: right;
+    margin-top: 15px;
+    margin-right: 5px;
+
+}
+#price {
+    width: 200px;
+}
+.carrentbtn {
+    margin: 20px;
+
+}
+#carrenttable tbody td ,#carsharetable tbody td {
+    padding: 10px;
+    text-align: center;
+}
+#carsharetable{
+}
+.vacationlabel{
+    padding: 10px;
+    font-family: "Arabic Typesetting";
+    font-size: 18px;
+    width: 30px;
+}
+.vacationcoleection{
+    float: right;
+
+}
+.vacation{
+    display: inline-block;
+    /*height: 100px;*/
+}
+.carphoto{
+    float: right;
+}
+.error{
+    width: 250px;
+    float: left;
+    margin: 25px;
+    color: red;
+    font-size: 16px;
+}
+/*____________________________________________end of car share page _________________________________________*/
