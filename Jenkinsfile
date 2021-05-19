@@ -1,12 +1,11 @@
 pipeline {
   agent any
   stages {
-     stage("build") {
-           steps {   echo 'build the app'}
+     stage("checkout") {
+                 steps {
+        git 'https://github.com/mohamed1311990/wasalny.git'
          }
-     stage("test") {
-           steps { echo  'test the app' }
-         }
+     }
       stage("deploy") {
            steps { echo  'deploy the app' }
          }
