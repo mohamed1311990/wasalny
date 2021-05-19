@@ -20,7 +20,7 @@ h1{
 .register, .login{
     color: white;
     font-family: opensans, "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
-    text-decoration-color: rgb(255,255,255);
+    text-decoration-color: rgb(255,250,255);
 }
 
 /*  home */
